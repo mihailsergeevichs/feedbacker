@@ -1,0 +1,27 @@
+{
+    "feedbackerApp": {
+        "feedback" : {
+            "home": {
+                "title": "Feedbacks",
+                "createLabel": "Créer un nouveau Feedback",
+                "createOrEditLabel": "Créer ou éditer un Feedback",
+                "search": "Search for Feedback"
+            },
+            "created": "Un nouveau Feedback a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Feedback avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Feedback avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Feedback {{ id }} ?"
+            },
+            "detail": {
+                "title": "Feedback"
+            },
+            "date": "Date",
+            "quality": "Quality",
+            "speed": "Speed",
+            "price": "Price",
+            "commentary": "Commentary"
+        }
+    }
+}
+

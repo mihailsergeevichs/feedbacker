@@ -1,0 +1,64 @@
+<div>
+    <h2 translate="feedbackerApp.feedback.home.title">Feedbacks</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="feedback.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+                        translate="feedbackerApp.feedback.home.createLabel">Create new Feedback
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="predicate" ascending="reverse" callback="reset()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="date"><span translate="feedbackerApp.feedback.date">Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="quality"><span translate="feedbackerApp.feedback.quality">Quality</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="speed"><span translate="feedbackerApp.feedback.speed">Speed</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="price"><span translate="feedbackerApp.feedback.price">Price</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="commentary"><span translate="feedbackerApp.feedback.commentary">Commentary</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody infinite-scroll="loadPage(page + 1)" infinite-scroll-disabled="links['last'] == page">
+                <tr ng-repeat="feedback in feedbacks track by feedback.id">
+                    <td><a ui-sref="feedback.detail({id:feedback.id})">{{feedback.id}}</a></td>
+                    <td>{{feedback.date | date:'medium'}}</td>
+                    <td>{{feedback.quality}}</td>
+                    <td>{{feedback.speed}}</td>
+                    <td>{{feedback.price}}</td>
+                    <td>{{feedback.commentary}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="feedback.detail({id:feedback.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="feedback.edit({id:feedback.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="feedback.delete({id:feedback.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

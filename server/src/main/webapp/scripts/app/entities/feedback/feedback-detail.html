@@ -1,0 +1,62 @@
+
+<div>
+    <h2><span translate="feedbackerApp.feedback.detail.title">Feedback</span> {{feedback.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="feedbackerApp.feedback.date">Date</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{feedback.date | date:'medium'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="feedbackerApp.feedback.quality">Quality</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{feedback.quality}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="feedbackerApp.feedback.speed">Speed</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{feedback.speed}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="feedbackerApp.feedback.price">Price</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{feedback.price}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="feedbackerApp.feedback.commentary">Commentary</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{feedback.commentary}}</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>
