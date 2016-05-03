@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Feedbacker</string>
+    <string name="submit">Отправить!</string>
+    <string name="qualityBar">Оценить вкус блюд и напитков:</string>
+    <string name="speedBar">Оценить скорость подачи заказа:</string>
+    <string name="priceBar">Оценить нашу ценовую политику:</string>
+    <string name="commentary">Хотите что-то добавить?</string>
+    <string name="greetings">Благодарим Вас за то, что помогаете делать нас лучше!</string>
+
+</resources>

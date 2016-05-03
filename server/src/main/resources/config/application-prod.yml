@@ -20,10 +20,10 @@ spring:
             enabled: false
     datasource:
         driver-class-name: com.mysql.jdbc.jdbc2.optional.MysqlDataSource
-        url: jdbc:mysql://localhost:3306/feedbacker?useUnicode=true&characterEncoding=utf8
-        name:
-        username: root
-        password:
+        url: jdbc:mysql://west2-mysql-instance1.cfctjwsgciiq.us-west-2.rds.amazonaws.com:3306/database_name?createDatabaseIfNotExist=true
+        name: feedbacker
+        username: feedbacker
+        password: feedbacker
     jpa:
         database-platform: org.hibernate.dialect.MySQLInnoDBDialect
         database: MYSQL
