@@ -1,4 +1,4 @@
-package org.springframework.android.basicauth;
+package com.mihailsergeevichs.feedbacker;
 
 import java.util.Date;
 

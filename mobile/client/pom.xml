@@ -2,16 +2,16 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.springframework.android</groupId>
-	<artifactId>spring-android-basic-auth-client</artifactId>
+	<groupId>com.mihailsergeevichs.feedbacker</groupId>
+	<artifactId>feedbacker</artifactId>
 	<version>0.1.0</version>
 	<packaging>apk</packaging>
-	<name>spring-android-basic-auth-client</name>
-	<url>http://spring.io/projects/spring-android</url>
-	<inceptionYear>2010</inceptionYear>
+	<name>Feedbacker</name>
+	<url></url>
+	<inceptionYear>2016</inceptionYear>
 	<organization>
-		<name>Spring</name>
-		<url>http://spring.io</url>
+		<name></name>
+		<url></url>
 	</organization>
 
 	<properties>
@@ -21,7 +21,7 @@
 		<android-platform>19</android-platform>
 		<android-maven-plugin-version>3.9.0-rc.1</android-maven-plugin-version>
 		<maven-compiler-plugin-version>3.1</maven-compiler-plugin-version>
-		<java-version>1.6</java-version>
+		<java-version>1.8</java-version>
 		<maven-eclipse-plugin-version>2.9</maven-eclipse-plugin-version>
 		<com.google.android-version>4.1.1.4</com.google.android-version>
 		<org.springframework.android-version>1.0.1.RELEASE</org.springframework.android-version>

@@ -1,52 +1,18 @@
-/*
- * Copyright 2010-2014 the original author or authors.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 
-package org.springframework.android.basicauth;
+package com.mihailsergeevichs.feedbacker;
 
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
-import java.util.Date;
-import java.util.List;
 
 
-import org.apache.http.NameValuePair;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.params.DefaultedHttpParams;
-import org.apache.http.params.HttpParams;
-import org.json.JSONException;
-import org.json.JSONObject;
+
+
 import org.springframework.http.HttpAuthentication;
 import org.springframework.http.HttpBasicAuthentication;
-import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.http.converter.json.MappingJacksonHttpMessageConverter;
-import org.springframework.web.client.HttpClientErrorException;
-import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestTemplate;
 
 import android.os.AsyncTask;
@@ -130,6 +96,8 @@ public class MainActivity extends AbstractAsyncPushActivity {
             feedback.setQuality(quality);
             feedback.setSpeed(speed);
 
+            //currently hardcoded as "admin" credentials
+            //temporary csrf protection on a server side disabled
             HttpAuthentication authHeader = new HttpBasicAuthentication("admin", "admin");
             HttpHeaders requestHeaders = new HttpHeaders();
             requestHeaders.setAuthorization(authHeader);
@@ -142,6 +110,7 @@ public class MainActivity extends AbstractAsyncPushActivity {
             try {
                 restTemplate.postForObject(url, feedback, String.class);
             } catch (Throwable e){
+                Log.e(TAG, e.getMessage());
                 //do nothing
             }
             return null;

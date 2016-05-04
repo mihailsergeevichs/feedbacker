@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.*;
 import javax.inject.Inject;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -29,10 +31,10 @@ import java.util.Optional;
 public class FeedbackResource {
 
     private final Logger log = LoggerFactory.getLogger(FeedbackResource.class);
-        
+
     @Inject
     private FeedbackRepository feedbackRepository;
-    
+
     /**
      * POST  /feedbacks -> Create a new feedback.
      */
@@ -45,6 +47,7 @@ public class FeedbackResource {
         if (feedback.getId() != null) {
             return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert("feedback", "idexists", "A new feedback cannot already have an ID")).body(null);
         }
+        feedback.setDate(ZonedDateTime.now(ZoneId.of("EET")));
         Feedback result = feedbackRepository.save(feedback);
         return ResponseEntity.created(new URI("/api/feedbacks/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert("feedback", result.getId().toString()))
@@ -79,7 +82,7 @@ public class FeedbackResource {
     public ResponseEntity<List<Feedback>> getAllFeedbacks(Pageable pageable)
         throws URISyntaxException {
         log.debug("REST request to get a page of Feedbacks");
-        Page<Feedback> page = feedbackRepository.findAll(pageable); 
+        Page<Feedback> page = feedbackRepository.findAll(pageable);
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/feedbacks");
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
