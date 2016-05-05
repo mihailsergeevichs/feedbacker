@@ -8,6 +8,6 @@ angular.module('feedbackerApp')
 
         $scope.logout = function () {
             Auth.logout();
-            $state.go('home');
+            $state.go('login');
         };
     });
