@@ -2,7 +2,7 @@
     "feedbackerApp": {
         "feedback" : {
             "home": {
-                "title": "Отзывы",
+                "title": "Отзывы, оставленные Вам посетителями:",
                 "createLabel": "Создать новый отзыв",
                 "createOrEditLabel": "Создать или редактировать отзыв",
                 "search": "Поиск отзыва"

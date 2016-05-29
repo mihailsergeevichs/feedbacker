@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" xmlns:opacity="http://www.w3.org/1999/xhtml" xmlns:filter="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,13 +24,14 @@
         <![endif]-->
         <div ng-show="{{ENV === 'dev'}}" class="development" ng-cloak=""></div>
         <div ui-view="navbar" ng-cloak=""></div>
-        <!--<div class="container">-->
-            <!--<div class="well" ui-view="content"></div>-->
+        <div class="container" >
+            <div class="well" ui-view="content" opacity: 0.7;
+                 filter: alpha(Opacity=70);></div>
 
-            <!--<div class="footer">-->
-                <!--<p translate="footer">This is your footer</p>-->
-            <!--</div>-->
-        <!--</div>-->
+            <div class="footer">
+                <p translate="footer">If you have any questions or troubles, please contact me: mihailsergeevichs@gmail.com</p>
+            </div>
+        </div>
 
         <!-- Google Analytics: uncomment and change UA-XXXXX-X to be your site's ID.
         <script>
@@ -158,5 +159,6 @@
     <script src="scripts/components/entities/feedback/feedback.service.js"></script>
     <script src="bower_components/messageformat/locale/ru.js"></script>
     <!-- endbuild -->
+
 </body>
 </html>

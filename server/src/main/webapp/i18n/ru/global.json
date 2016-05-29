@@ -1,6 +1,6 @@
 {
     "global": {
-        "title": "feedbacker",
+        "title": "Feedbacker",
         "browsehappy": "Ваш браузер <strong>устарел</strong>. Пожалуйста <a href=\"http://browsehappy.com/?locale=ru\">обновите ваш браузер</a>.",
         "menu": {
             "home": "Главная",
@@ -115,5 +115,5 @@
         "emailexists": "Эл. почта уже используется!!",
         "idexists": "Новый {{entityName}} не может иметь данный ID"
     },
-    "footer": "Это ваш футтер"
+    "footer": "Если у Вас возникли какие-либо вопросы или трудности связанные с работой приложения, пожалуйста, свяжитесь со мной: mihailsergeevichs@gmail.com"
 }

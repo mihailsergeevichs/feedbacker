@@ -4,6 +4,8 @@ body {
     color: #333;
     background:url('../images/feedbacker-background.jpg') top center no-repeat fixed;
     background-size:cover;
+    opacity: 0.9;
+    filter: alpha(Opacity=90);
 }
 
 /* ==========================================================================

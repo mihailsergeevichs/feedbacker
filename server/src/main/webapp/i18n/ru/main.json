@@ -3,7 +3,7 @@
         "title": "Добро пожаловать в Feedbacker!",
         "subtitle": "Это ваша домашняя страница",
         "logged": {
-            "message": "Вы вошли как пользователь \"{{username}}\"."
+            "message": "Ваш текущий логин в системе: \"{{username}}\"."
         },
         "question": "Если у Вас возникли вопросы по JHipster:",
         "link": {

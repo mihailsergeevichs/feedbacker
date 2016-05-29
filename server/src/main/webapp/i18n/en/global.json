@@ -115,5 +115,5 @@
         "emailexists": "E-mail is already in use!",
         "idexists": "A new {{ entityName }} cannot already have an ID"
     },
-    "footer": "This is your footer"
+    "footer": "If you have any questions or troubles, please contact me: mihailsergeevichs@gmail.com"
 }
