@@ -22,19 +22,28 @@ public class Feedback implements Serializable {
 
     @Column(name = "date")
     private ZonedDateTime date;
-    
+
     @Column(name = "quality")
-    private String quality;
-    
+    private Integer quality;
+
     @Column(name = "speed")
-    private String speed;
-    
+    private Integer speed;
+
     @Column(name = "price")
-    private String price;
-    
+    private Integer price;
+
+    @Column(name = "waiter_name")
+    private String waiterName;
+
+    @Column(name = "customer_name")
+    private String customerName;
+
+    @Column(name = "customer_phone")
+    private String customerPhone;
+
     @Column(name = "commentary")
     private String commentary;
-    
+
     public Long getId() {
         return id;
     }
@@ -46,39 +55,63 @@ public class Feedback implements Serializable {
     public ZonedDateTime getDate() {
         return date;
     }
-    
+
     public void setDate(ZonedDateTime date) {
         this.date = date;
     }
 
-    public String getQuality() {
+    public Integer getQuality() {
         return quality;
     }
-    
-    public void setQuality(String quality) {
+
+    public void setQuality(Integer quality) {
         this.quality = quality;
     }
 
-    public String getSpeed() {
+    public Integer getSpeed() {
         return speed;
     }
-    
-    public void setSpeed(String speed) {
+
+    public void setSpeed(Integer speed) {
         this.speed = speed;
     }
 
-    public String getPrice() {
+    public Integer getPrice() {
         return price;
     }
-    
-    public void setPrice(String price) {
+
+    public void setPrice(Integer price) {
         this.price = price;
+    }
+
+    public String getWaiterName() {
+        return waiterName;
+    }
+
+    public void setWaiterName(String waiterName) {
+        this.waiterName = waiterName;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public String getCustomerPhone() {
+        return customerPhone;
+    }
+
+    public void setCustomerPhone(String customerPhone) {
+        this.customerPhone = customerPhone;
     }
 
     public String getCommentary() {
         return commentary;
     }
-    
+
     public void setCommentary(String commentary) {
         this.commentary = commentary;
     }
@@ -111,6 +144,9 @@ public class Feedback implements Serializable {
             ", quality='" + quality + "'" +
             ", speed='" + speed + "'" +
             ", price='" + price + "'" +
+            ", waiter_name='" + waiterName + "'" +
+            ", customer_name='" + customerName + "'" +
+            ", customer_phone='" + customerPhone + "'" +
             ", commentary='" + commentary + "'" +
             '}';
     }

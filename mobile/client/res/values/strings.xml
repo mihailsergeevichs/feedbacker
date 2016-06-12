@@ -7,6 +7,9 @@
     <string name="speedBar">Оценить скорость подачи заказа:</string>
     <string name="priceBar">Оценить нашу ценовую политику:</string>
     <string name="commentary">Хотите что-то добавить?</string>
+    <string name="contact_label">Обратная связь(по желанию)</string>
+    <string name="contact_name">Ваше имя:</string>
+    <string name="contact_phone">Контактный телефон:</string>
     <string name="greetings">Благодарим Вас за то, что помогаете делать нас лучше!</string>
 
 </resources>

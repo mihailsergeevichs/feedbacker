@@ -44,4 +44,5 @@ angular.module('feedbackerApp')
                 id: null
             };
         };
+        $scope.numLimit = 15;
     });

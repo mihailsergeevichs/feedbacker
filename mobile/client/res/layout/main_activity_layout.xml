@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
     android:layout_centerVertical="true"
     android:orientation="vertical"
-    android:weightSum="1"
+    android:weightSum="1">
     android:background="@drawable/feed_back">
 
     <TextView
@@ -13,28 +13,32 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="RESTAURANT NAME"
         android:id="@+id/textView"
-        android:layout_gravity="center_horizontal"
+        android:layout_gravity="center_horizontal|bottom|top"
         android:layout_marginTop="150px"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:clickable="false"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginBottom="0dp"
+        android:focusableInTouchMode="false" />
 
     <TextView
         android:id="@+id/label_qualityBar"
         android:layout_width="wrap_content"
-        android:layout_height="34dp"
+        android:layout_height="wrap_content"
         android:paddingTop="4dip"
         android:text="@string/qualityBar"
         android:textColor="#eaeaea"
         android:enabled="false"
         android:layout_gravity="left"
-        android:layout_marginTop="100px" />
+        android:layout_marginTop="50dp" />
 
     <RatingBar
         android:id="@+id/qualityBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:numStars="10"
-        android:stepSize="1.0"
-        android:rating="5.0"
+        android:numStars="5"
+        android:stepSize="1"
+        android:rating="3"
         style="@android:style/Widget.RatingBar" />
 
     <TextView
@@ -49,9 +53,9 @@
         android:id="@+id/speedBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:numStars="10"
-        android:stepSize="1.0"
-        android:rating="5.0"
+        android:numStars="5"
+        android:stepSize="1"
+        android:rating="3"
         style="@android:style/Widget.RatingBar" />
 
     <TextView
@@ -66,9 +70,9 @@
         android:id="@+id/priceBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:numStars="10"
-        android:stepSize="1.0"
-        android:rating="5.0"
+        android:numStars="5"
+        android:stepSize="1"
+        android:rating="3"
         style="@android:style/Widget.RatingBar" />
 
     <TextView
@@ -95,13 +99,68 @@
         android:background="#d8d4d4"
         android:textColor="#595959" />
 
+    <TextView
+        android:id="@+id/contact_label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dip"
+        android:text="@string/contact_label"
+        android:textColor="#eaeaea"
+        android:layout_marginTop="50px" />
+
+    <TextView
+        android:id="@+id/contact_label_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dip"
+        android:text="@string/contact_name"
+        android:textColor="#eaeaea"
+        android:layout_marginTop="50px" />
+
+    <EditText
+        android:id="@+id/contact_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:padding="8dip"
+        android:singleLine="false"
+        android:lines="1"
+        android:longClickable="true"
+        android:linksClickable="true"
+        android:layout_marginTop="15px"
+        android:background="#d8d4d4"
+        android:textColor="#595959" />
+
+    <TextView
+        android:id="@+id/contact_label_phone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dip"
+        android:text="@string/contact_phone"
+        android:textColor="#eaeaea"
+        android:layout_marginTop="50px" />
+
+    <EditText
+        android:id="@+id/contact_phone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:padding="8dip"
+        android:singleLine="false"
+        android:lines="1"
+        android:longClickable="true"
+        android:linksClickable="true"
+        android:layout_marginTop="15px"
+        android:background="#d8d4d4"
+        android:textColor="#595959" />
+
     <Button
         android:id="@+id/submit"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50px"
         android:text="@string/submit"
         android:textColor="@android:color/background_dark"
-        android:layout_marginTop="100px"
-        android:background="#979696" />
+        android:background="#979696"
+        style="@android:style/Widget.ActionButton" />
 
 </LinearLayout>

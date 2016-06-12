@@ -117,7 +117,7 @@ angular.module('feedbackerApp')
                             }]
                         }
                     }).result.then(function(result) {
-                        $state.go('feedback', null, { reload: true });
+                        $state.go('home', null, { reload: true });
                     }, function() {
                         $state.go('^');
                     })

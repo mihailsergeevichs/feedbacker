@@ -1,0 +1,5 @@
+id;date;quality;speed;price;waiter_name;customer_name;customer_phone;commentary
+1;null;5;5;5;max ivansky;misha_sholkovyj;+3809945645634;test commentary
+2;null;1;1;1;max ivansky;misha_sholkovyj;+3809945645634;test commentary too long commentary lkjdfkdfgdfgdfgdfg
+3;null;2;3;5;max ivansky;misha_sholkovyj;+3809945645634;test
+4;null;1;1;1;max ivansky;misha_sholkovyj;+3809945645634;test commentary tooo long commentary dflgdfng,mdfngmd,fng,mdfng,mdfng,mdnfg,mdfngm,ndfg,mfdngmd,fmngmdfng,dfgn,mdfngdfglkdjgljgldkfgdfgfgfdgfgdfg

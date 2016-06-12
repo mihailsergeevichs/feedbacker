@@ -20,6 +20,9 @@
             "quality": "Quality",
             "speed": "Speed",
             "price": "Price",
+            "waiterName": "Waiter name",
+            "customerName": "Customer Name",
+            "customerPhone": "Customer Phone",
             "commentary": "Commentary"
         }
     }

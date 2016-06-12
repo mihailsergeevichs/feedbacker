@@ -16,25 +16,41 @@
     <!--
         Added the entity Feedback.
     -->
-    <changeSet id="20160428131923" author="jhipster">
+    <changeSet id="20160428131923" author="mihailsergeevichs">
         <createTable tableName="feedback">
             <column name="id" type="bigint" autoIncrement="${autoIncrement}">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
             <column name="date" type="timestamp"/>
-            
-            <column name="quality" type="varchar(255)"/>
-            
-            <column name="speed" type="varchar(255)"/>
-            
+
+            <column name="quality" type="NUMERIC"/>
+
+            <column name="speed" type="NUMERIC"/>
+
+            <column name="price" type="NUMERIC"/>
+
             <column name="price" type="varchar(255)"/>
-            
+
+            <column name="customer_name" type="varchar(255)"/>
+
+            <column name="customer_phone" type="varchar(255)"/>
+
             <column name="commentary" type="varchar(255)"/>
-            
-            <!-- jhipster-needle-liquibase-add-column - Jhipster will add columns here, do not remove-->
+
         </createTable>
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/feedbacks.csv"
+                  separator=";"
+                  tableName="feedback">
+            <column name="date" type="timestamp"/>
+            <column name="quality" type="NUMERIC"/>
+            <column name="speed" type="NUMERIC"/>
+            <column name="price" type="NUMERIC"/>/>
+        </loadData>
+
         <dropDefaultValue tableName="feedback" columnName="date" columnDataType="datetime"/>
 
-        
+
     </changeSet>
 </databaseChangeLog>

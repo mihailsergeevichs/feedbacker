@@ -1,14 +1,14 @@
-<div ng-cloak ng-switch="isAuthenticated()">
+<div ng-cloak ng-switch="isAuthenticated()" xmlns:feedback.detail>
     <div class="row">
         <!--<div class="col-md-4">-->
             <!--<span class="hipster img-responsive img-rounded"></span>-->
         <!--</div>-->
-        <div class="col-md-8">
+        <div class="col-md-12">
             <h1 translate="main.title">Welcome to Feedbacker!</h1>
             <!--<p class="lead" translate="main.subtitle">This is your homepage</p>-->
 
             <div ng-switch="isAuthenticated()">
-                <div class="alert alert-success" ng-switch-when="true" translate="main.logged.message" translate-values="{username: '{{account.login}}'}">
+                <div class="alert alert-success" ng-switch-when="true" translate="main.logged.message" translate-values="{username: '{{account.login}}'}" style="display:none;">
                     You are logged in as user "{{account.login}}".
                 </div>
 
@@ -22,7 +22,7 @@
             </div>
 
             <div>
-                <h2 translate="feedbackerApp.feedback.home.title">Feedbacks</h2>
+                <h2 translate="feedbackerApp.feedback.home.title" style="display:none;">Feedbacks</h2>
                 <jh-alert></jh-alert>
                 <!--<div class="container-fluid">-->
                     <!--<div class="row">-->
@@ -46,18 +46,24 @@
                             <th jh-sort-by="quality"><span translate="feedbackerApp.feedback.quality">Quality</span> <span class="glyphicon glyphicon-sort"></span></th>
                             <th jh-sort-by="speed"><span translate="feedbackerApp.feedback.speed">Speed</span> <span class="glyphicon glyphicon-sort"></span></th>
                             <th jh-sort-by="price"><span translate="feedbackerApp.feedback.price">Price</span> <span class="glyphicon glyphicon-sort"></span></th>
+                            <th jh-sort-by="price"><span translate="feedbackerApp.feedback.waiterName">Waiter Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                            <th jh-sort-by="price"><span translate="feedbackerApp.feedback.customerName">Customer name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                            <th jh-sort-by="price"><span translate="feedbackerApp.feedback.customerPhone">Customer phone</span> <span class="glyphicon glyphicon-sort"></span></th>
                             <th jh-sort-by="commentary"><span translate="feedbackerApp.feedback.commentary">Commentary</span> <span class="glyphicon glyphicon-sort"></span></th>
                             <th></th>
                         </tr>
                         </thead>
                         <tbody infinite-scroll="loadPage(page + 1)" infinite-scroll-disabled="links['last'] == page">
-                        <tr ng-repeat="feedback in feedbacks track by feedback.id">
-                            <td><a ui-sref="feedback.detail({id:feedback.id})">{{feedback.id}}</a></td>
-                            <td>{{feedback.date | date:'medium'}}</td>
-                            <td>{{feedback.quality}}</td>
-                            <td>{{feedback.speed}}</td>
-                            <td>{{feedback.price}}</td>
-                            <td>{{feedback.commentary}}</td>
+                        <tr ng-repeat="feedback in feedbacks track by feedback.id" ui-sref="feedback.detail({id:feedback.id})">
+                                <td>{{feedback.id}}</td>
+                                <td>{{feedback.date | date:'medium'}}</td>
+                                <td>{{feedback.quality}}</td>
+                                <td>{{feedback.speed}}</td>
+                                <td>{{feedback.price}}</td>
+                                <td>{{feedback.waiterName}}</td>
+                                <td>{{feedback.customerName}}</td>
+                                <td>{{feedback.customerPhone}}</td>
+                                <td>{{feedback.commentary | limitTo:numLimit}}{{feedback.commentary.length > numLimit ? '...' : ''}}</td>
                             <td class="text-right">
                                 <!--<div class="btn-group flex-btn-group-container">-->
                                     <!--<button type="submit"-->

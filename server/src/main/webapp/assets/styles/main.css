@@ -8,6 +8,12 @@ body {
     filter: alpha(Opacity=90);
 }
 
+tr {
+    cursor: pointer;
+}
+
+
+
 /* ==========================================================================
 Hide ng-cloak on page load, https://docs.angularjs.org/api/ng/directive/ngCloak
 ========================================================================== */
