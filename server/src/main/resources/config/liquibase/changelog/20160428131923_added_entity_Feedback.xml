@@ -29,7 +29,7 @@
 
             <column name="price" type="NUMERIC"/>
 
-            <column name="price" type="varchar(255)"/>
+            <column name="waiter_name" type="varchar(255)"/>
 
             <column name="customer_name" type="varchar(255)"/>
 

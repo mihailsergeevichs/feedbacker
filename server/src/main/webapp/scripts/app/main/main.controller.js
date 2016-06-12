@@ -46,3 +46,4 @@ angular.module('feedbackerApp')
         };
         $scope.numLimit = 15;
     });
+
