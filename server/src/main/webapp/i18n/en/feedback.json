@@ -5,6 +5,8 @@
                 "title": "Feedbacks:",
                 "createLabel": "Create a new Feedback",
                 "createOrEditLabel": "Create or edit a Feedback",
+                "chart": "Chart representing dynamic of average grades from customers",
+                "table": "Table representing feedbacks from customers",
                 "search": "Search for Feedback"
             },
             "created": "A new Feedback is created with identifier {{ param }}",
